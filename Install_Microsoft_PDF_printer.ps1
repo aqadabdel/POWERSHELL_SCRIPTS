@@ -3,7 +3,7 @@
 # Script to download and install microsoft PDF printer
 #
 
-$script:LogFile = "c:\SCRIPTS\LOG\AddMicrosoftPdfPrinter.log"
+$script:LogFile = "c:\DRIVERS\LOG\AddMicrosoftPdfPrinter.log"
 $script:Version = "1.0.0"
 
 # LISTE COPIEURS DISPONIBLES  
