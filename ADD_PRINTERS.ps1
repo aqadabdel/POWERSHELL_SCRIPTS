@@ -4,10 +4,8 @@ Add-Type -AssemblyName System.Drawing
 $script:LogFile = "c:\SCRIPTS\LOG\PrinterDirectIPRemove.log"
 $script:Version = "1.2.0"
 
-# LISTE COPIEURS DISPONIBLES  
-
-# JOUTER ICI LES IMPRIMANTES
-# AINSI QUE LES DRIVERS ASSOCIES
+# ADD PRINTERS PARAMETERS HERE
+# WITH THE DRIVER FOLDER PATH
 
 $liste_imprimantes = @(
   @{
