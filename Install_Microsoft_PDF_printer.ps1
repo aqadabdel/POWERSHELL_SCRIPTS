@@ -6,11 +6,6 @@
 $script:LogFile = "c:\DRIVERS\LOG\AddMicrosoftPdfPrinter.log"
 $script:Version = "1.0.0"
 
-# LISTE COPIEURS DISPONIBLES  
-
-# JOUTER ICI LES IMPRIMANTES
-# AINSI QUE LES DRIVERS ASSOCIES
-
 $pdf_printer = @{
         name = 'PDF'
         port_name = 'PDF'
