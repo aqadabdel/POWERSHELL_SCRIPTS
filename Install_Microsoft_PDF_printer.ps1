@@ -1,16 +1,17 @@
-## AQAD Abdelaziz
+
+# AQAD Abdelaziz
 ## 31/10/2022
 # Script to download and install microsoft PDF printer
-#
 
-$script:LogFile = "c:\DRIVERS\LOG\AddMicrosoftPdfPrinter.log"
-$script:Version = "1.0.0"
+$script:LogFile = "c:\SCRIPTS\LOG\PrinterDirectIPRemove.log"
+$script:Version = "1.2.0"
+
 
 $pdf_printer = @{
         name = 'PDF'
         port_name = 'PDF'
         driver_name = 'Microsoft Print To PDF'
-        driver_inf = "C:\DRIVERS\MICROSOFT_PDF\*.inf"
+        driver_inf = "C:\DRIVERS\MS_PDF_PRINTER\prnms009.Inf"
         url = ' '
    }
 
@@ -120,8 +121,7 @@ function Download_Expand_PDF_Drivers ()
     }
 
     expand "pdf_printer.cab" -F:* "$Dir\"
-    $driver = "$Dir\*.inf"
-    return $driver
+    
 }
 function Add_MS_PDF_printer ( $pdf_printer) {
 
@@ -162,7 +162,7 @@ function Add_MS_PDF_printer ( $pdf_printer) {
         Write-Host $message -ForegroundColor Green
         Write-Log $message
         
-        $pdfprinter.driver_inf = Download_Expand_PDF_Drivers
+        Download_Expand_PDF_Drivers
         
         pnputil.exe -i -a $pdf_printer.driver_inf
         Add-PrinterDriver -Name $pdf_printer.driver_name
