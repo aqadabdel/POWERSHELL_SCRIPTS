@@ -1,4 +1,7 @@
-﻿Write-Output "LOADING...`n"
+# Get mac address and copy it directly to the clipboard 
+# AQAD ABDELAZIZ 
+
+Write-Output "LOADING...`n"
 
 $network = Get-WmiObject win32_networkadapterconfiguration | select description, macaddress | where { $_.description -Like "*ether*" }
 $network_mac  = $network.macaddress
