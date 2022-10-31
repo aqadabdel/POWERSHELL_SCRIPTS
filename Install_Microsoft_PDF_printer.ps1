@@ -3,7 +3,7 @@
 ## 31/10/2022
 # Script to download and install microsoft PDF printer
 
-$script:LogFile = "c:\SCRIPTS\LOG\PrinterDirectIPRemove.log"
+$script:LogFile = "c:\PRINTERS\LOG\ADD_MSPRINTER_PDF.log"
 $script:Version = "1.2.0"
 
 
