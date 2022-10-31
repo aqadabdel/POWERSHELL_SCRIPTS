@@ -1,3 +1,8 @@
+## AQAD Abdelaziz
+## 31/10/2022
+# Script to download and install microsoft PDF printer
+#
+
 $script:LogFile = "c:\SCRIPTS\LOG\PrinterDirectIPRemove.log"
 $script:Version = "1.0.0"
 
